@@ -10,6 +10,7 @@ data class HomeViewState(
 class HomeViewModel(): BaseViewModel() {
     companion object {
         fun provideFactory(): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 return HomeViewModel() as T
             }
